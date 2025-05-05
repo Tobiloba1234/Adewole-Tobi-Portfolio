@@ -1,0 +1,256 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    transition: all 0.4s;
+}
+
+body{
+    background-color:#2f7751;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #e6edf1;
+    letter-spacing: 2;
+    line-height:2 ;
+    width:100%;
+}
+
+/* TYPOGRAPHY */
+h1{
+    font-size:3rem;
+    font-weight:700;
+    margin-top:0;
+}
+
+h2{
+    font-size:2rem;
+    font-weight:500;
+}
+
+p{
+    font-size:1.2rem;
+    font-weight:400;
+}
+
+li{
+    cursor:pointer;
+    list-style: none;
+    margin-bottom:2em;
+    
+}
+
+a{
+  color:#ffb469;
+  text-decoration: none;
+  font-size:1.3rem;
+  font-weight:bold;
+}
+
+a:active{
+    color:aqua;
+}
+
+/* Navbar Styling */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height: 5rem;
+    padding-top:1rem;
+    border-bottom:2px solid rgb(233,251,219);
+}
+
+/* Logo Styling */
+.header-logo img{
+    
+    width:222px;
+    margin-left:1rem;
+}
+
+.harmburger-menu{
+    padding-right:1.5rem;
+    cursor:pointer;
+}
+
+.hamburger-menu .line{
+    display:block;
+    width:2.5rem;
+    height:4px;
+    margin-right:1em;
+    margin-bottom:10px;
+    background-color:black;
+    cursor:pointer;
+}
+
+.nav-menu{
+    position:fixed;
+    width:94%;
+    top:6rem;
+    left:18px;
+    background-color: rgb(255,255,255);
+    font-weight: 600;
+}
+
+.nav-menu a{
+    display:block;
+    text-align:center;
+    padding:2px 0;
+}
+
+.nav-menu a:hover{
+    background-color: rgb(233,251,219);
+}
+
+.hide{
+    display:none;
+}
+/* LAYOUT */
+.container{
+    display:block;
+    width:90%;
+    max-width:800px;
+    margin:0 auto;
+}
+
+.contact{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+
+.clr-text{
+   color:#ffb469;
+}
+.lang-icon{
+    display:flex;
+    justify-content:baseline;
+    align-items:center;
+    gap:7em;
+}
+.fa-brands{
+    font-size:2rem;
+    color:#ffb469;
+}
+
+.project{
+    margin-top:2em;
+    width:100%;
+    border: 4px inset ;
+    
+}
+
+.project,.project-img{
+border-radius:10px;
+}
+
+.project-intro,
+.github-link,
+.demo-link{
+  margin:.5em;
+}
+
+.project-img{
+    width:100%; 
+    height:70%;
+   
+}
+
+.github-link,.demo-link{
+    font-size:1.25rem;
+    border:2px dotted ;
+    padding:0 .5em;
+    
+}
+
+.vl{
+    border-left:3px solid pink;
+}
+
+/* Footer */
+
+
+.footer-intro,.social-intro{
+ margin:2em 0;
+}
+
+/* Performing an animation of moving the text */
+/* Initially: Animation name:move,
+Animation-duration:4s,
+Animation-timing-function:linear,ease-out and ease-in-out,chose ease-in,
+Animation-delay:1s of delay,
+Animation-direction: reverse,alternate-reverse, chose alternate
+Animation-fill-mode: Either have backward. Chose forward but can do both.
+Animation-play-state: Running or Paused*/
+.social-intro{
+    text-align: center;
+    border:4px  double rgb(223, 209, 174);
+    border-radius:20px;
+    
+    padding:0 .7em;
+    width:300px;
+    /* animation-name: spin;
+    animation-duration:4s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+    animation-play-state:paused; */
+}
+
+.social-intro:hover{
+    animation-play-state:running;
+    cursor:pointer;
+}
+
+/* @keyframes spin{
+    from{
+        transform: rotate(0deg);
+        color:#fff;
+    }
+
+    to{
+        transform:rotate(360deg);
+        color:#e2a83b;
+    }
+} */
+
+.fa-envelope{
+    font-size:2rem;
+}
+
+
+
+@media screen and (min-width:600px){
+    .navbar{
+        justify-content:space around;
+    }
+
+    .nav-menu{
+        display:block;
+        position:static;
+        width:auto;
+        margin-right:20px;
+        background:none;
+    }
+
+    .nav-menu a{
+        display:inline-block;
+        padding: 15px 20px;
+    }
+
+    .nav-menu a:hover{
+        background-color: rgb(223,251,219);
+        border-radius:5px;
+    }
+
+    .hamburger-menu{
+        display:none;
+    }
+}
+
+@media (width:670px){
+  .nav-menu a{
+    margin-right:1em;
+    padding:0;
+  }
+  
+}
